@@ -13,7 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>commander</name>
     <description>ectr-commander</description>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <pluginRepositories>
         <pluginRepository>
@@ -45,10 +45,6 @@
         </dependency>
     </dependencies>
 
-    <modules>
-        <module>learner</module>
-    </modules>
-
     <build>
         <plugins>
             <plugin>
@@ -79,52 +75,50 @@
                 <!--</executions>-->
             <!--</plugin>-->
 
-            <plugin>
-                <artifactId>maven-jar-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>exe-jar</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                        <phase>package</phase>
-                        <configuration>
-                            <classifier>exe</classifier>
-                            <archive>
-                                <manifest>
-                                    <mainClass>com.ectr.commander.CommanderApplication</mainClass>
-                                    <addClasspath>true</addClasspath>
-                                </manifest>
-                            </archive>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>make-jar-with-dependencies</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                        <configuration>
-                            <descriptorRefs>
-                                <descriptorRef>jar-with-dependencies</descriptorRef>
-                            </descriptorRefs>
-                            <archive>
-                                <manifest>
-                                    <mainClass>com.ectr.commander.CommanderApplication</mainClass>
-                                </manifest>
-                            </archive>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+            <!--<plugin>-->
+                <!--<artifactId>maven-jar-plugin</artifactId>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<id>exe-jar</id>-->
+                        <!--<goals>-->
+                            <!--<goal>jar</goal>-->
+                        <!--</goals>-->
+                        <!--<phase>package</phase>-->
+                        <!--<configuration>-->
+                            <!--<classifier>exe</classifier>-->
+                            <!--<archive>-->
+                                <!--<manifest>-->
+                                    <!--<mainClass>com.ectr.commander.CommanderApplication</mainClass>-->
+                                    <!--<addClasspath>true</addClasspath>-->
+                                <!--</manifest>-->
+                            <!--</archive>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
+            <!--<plugin>-->
+                <!--<artifactId>maven-assembly-plugin</artifactId>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<id>make-jar-with-dependencies</id>-->
+                        <!--<phase>package</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>single</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<descriptorRefs>-->
+                                <!--<descriptorRef>jar-with-dependencies</descriptorRef>-->
+                            <!--</descriptorRefs>-->
+                            <!--<archive>-->
+                                <!--<manifest>-->
+                                    <!--<mainClass>com.ectr.commander.CommanderApplication</mainClass>-->
+                                <!--</manifest>-->
+                            <!--</archive>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
         </plugins>
     </build>
-
-
 
 </project>

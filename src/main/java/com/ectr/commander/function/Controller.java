@@ -8,6 +8,8 @@ public class Controller {
 
     @RequestMapping
     public String testPage() {
-        return " hello ";
+        JobRunner jobRunner = new JobRunner();
+
+        return jobRunner.readKafka();
     }
 }
